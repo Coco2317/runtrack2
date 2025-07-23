@@ -1,12 +1,9 @@
 <?php
-$str = "I'm sorry Dave I'm afraid I can't do that";
-$voyelles = ["a", "e", "i", "o", "u","y"];
+$str = "Tous ces instants seront perdus dans le temps comme les larmes sous la pluie";
 
-for ($i = 0; $i < strlen($str); $i++) {
-    $caractere = strtolower($str[$i]);
-    if (in_array($caractere,$voyelles)){
-        echo $str[$i] . "<br>";
-    }
+for ($i = 0 ; $i < strlen($str); $i+=2) {
+    echo $str [$i];
 }
 ?>
+
 
