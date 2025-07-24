@@ -7,7 +7,7 @@
 <body>
 
 <h2>Formulaire GET</h2>
-<form method="GET" action="">
+<form method="GET" action="index.php">
     <label for="prenom">Prénom :</label>
     <input type="text" name="prenom" id="prenom"><br><br>
 
