@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form method="get" action="">
+    <form method="get" action="index.php">
         <label for="nom">Nom :</label>
         <input type="text" name="nom" id="nom"><br><br>
 
