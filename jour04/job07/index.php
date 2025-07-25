@@ -1,54 +1,51 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice Maison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LE CASSE TÊTE CHINOIS</title>
 </head>
 <body>
+    
+       <form method="post">
+        <label>Largeur :</label>
+        <input type="text" name="largeur">
 
-    <form method="GET">
-        <label for="largeur">Largeur :</label>
-        <input type="text" name="largeur" id="largeur" required><br>
+        <label>Hauteur :</label>
+        <input type="text" name="hauteur">
 
-        <label for="hauteur">Hauteur :</label>
-        <input type="text" name="hauteur" id="hauteur" required><br>
-
-        <button type="submit">Afficher la maison</button>
+        <input type="submit" value="Envoyer">
     </form>
+
 
     <pre>
 <?php
-if (isset($_GET["largeur"]) && isset($_GET["hauteur"])) {
-    $largeur = intval($_GET["largeur"]);
-    $hauteur = intval($_GET["hauteur"]);
+if (isset($_POST['largeur']) && isset($_POST['hauteur'])) {
+    $largeur = $_POST['largeur'];
+    $hauteur = $_POST['hauteur'];
 
-    if ($largeur >= 2 && $hauteur >= 1 && $largeur % 2 === 0) {
-
-        $toitHauteur = $largeur / 2;
-
-        for ($i = 0; $i < $toitHauteur; $i++) {
-            $espacesAvant = str_repeat(' ', $toitHauteur - $i - 1);
-            $espacesMilieu = str_repeat(' ', $i * 2);
-            echo $espacesAvant . '/' . $espacesMilieu . '\\' . "\n";
+    if ($largeur > 2 && $hauteur > 1 && $largeur % 2 == 0) {
+        // Dessin du toit
+        for ($i = 0; $i < $largeur / 2; $i++) {
+            $espaces = ($largeur / 2) - $i;
+            echo str_repeat(" ", $espaces);
+            echo "/";
+            echo str_repeat("-", $i * 2);
+            echo "\\";
+            echo "\n";
         }
-
-        echo '/' . str_repeat('_', $largeur) . '\\' . "\n";
-
-        
-        for ($i = 0; $i < $hauteur - 1; $i++) {
-            echo '|' . str_repeat(' ', $largeur) . '|' . "\n";
+        // les murs
+        for ($i = 0; $i < $hauteur; $i++) {
+            echo " " . "|" . str_repeat(" ", $largeur - 2) . "|\n";
         }
-
-        
-        echo '|' . str_repeat('_', $largeur) . '|' . "\n";
-
-    } else {
-        echo "entrez une largeur paire ≥ 2 et une hauteur ≥ 1.";
+        // la base
+        echo " " . str_repeat("-", $largeur) . "\n";
     }
 }
-
 ?>
-    </pre>
-
+</pre>
 </body>
 </html>
+
+
+
