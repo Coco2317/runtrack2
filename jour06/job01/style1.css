@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+h1 {
+  text-align: center;
+  color: #c71585;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px #ff80ab;
+  letter-spacing: 2px;
+}
+
+
+.message {
+  text-align: center;
+  color: #c71585;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.styled-form {
+  background-color: #fff0f6;
+  border: 2px dashed #ff80ab;
+  padding: 35px;
+  width: 350px;
+  margin: auto;
+  border-radius: 20px;
+  font-family: 'Pacifico', cursive;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.styled-form:hover {
+  transform: scale(1.02);
+}
+
+.styled-form label {
+  display: block;
+  margin-top: 10px;
+  color: #d63384;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 12px;
+  border: 1px solid #ffa6c9;
+  font-size: 1em;
+}
+
+.styled-form button {
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.styled-form button:hover {
+  background-color: #ff1493;
+}
+
+.oracle {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.1em;
+  font-style: italic;
+  padding: 10px;
+  background: rgba(241, 13, 131, 0.4);
+  border-radius: 12px;
+}

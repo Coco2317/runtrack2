@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+h1 {
+  text-align: center;
+  color: #135bb4;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px #8093ff;
+  letter-spacing: 2px;
+}
+
+.message {
+  text-align: center;
+  color: #005073;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.styled-form {
+  background: linear-gradient(135deg, #d6efff, #c5e2f2);
+  border: 2px solid #a2d2ff;
+  padding: 35px;
+  width: 360px;
+  margin: auto;
+  border-radius: 15px;
+  font-family: 'Major Mono Display', monospace;
+  box-shadow: 0 0 10px rgba(0, 0, 128, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.styled-form:hover {
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+}
+
+.styled-form label {
+  display: block;
+  margin-top: 12px;
+  color: #003b5a;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #89cfff;
+  font-size: 1em;
+}
+
+.styled-form button {
+  background-color: #58aee6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.2s ease;
+}
+
+.styled-form button:hover {
+  transform: scale(1.05);
+}
+
+.oracle {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.1em;
+  font-style: italic;
+  padding: 10px;
+  background: rgba(139, 233, 245, 0.4);
+  border-radius: 12px;
+}

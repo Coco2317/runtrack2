@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+h1 {
+  text-align: center;
+  color: #047113;
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px #80ff8d;
+  letter-spacing: 2px;
+}
+
+.message {
+  text-align: center;
+  color: #5c4e3a;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.styled-form {
+  background-color: #fbf9f4;
+  border: 1px solid #a08965;
+  padding: 35px;
+  width: 360px;
+  margin: auto;
+  border-radius: 12px;
+  font-family: 'EB Garamond', serif;
+  box-shadow: 0 0 8px rgba(168, 130, 96, 0.2);
+}
+
+.styled-form label {
+  display: block;
+  margin-top: 10px;
+  color: #4a3c2a;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #b5a58e;
+  font-size: 1em;
+}
+
+.styled-form input:focus,
+.styled-form select:focus {
+  outline: none;
+  border-color: #948065;
+  background-color: #f6f1eb;
+}
+
+.styled-form button {
+  background-color: #948065;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.styled-form button:hover {
+  background-color: #7a644a;
+}
+
+.oracle {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.1em;
+  font-style: italic;
+  padding: 10px;
+  background: rgba(83, 249, 97, 0.4);
+  border-radius: 12px;
+}
