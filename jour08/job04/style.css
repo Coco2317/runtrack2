@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Urbanist', sans-serif;
+    background: radial-gradient(circle at top, #eaf7ef, #d4e1d7);
+    color: #2e4631;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #365c3b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(32, 63, 45, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"] {
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 2px solid #bdd4bf;
+    font-size: 1.1rem;
+    width: 100%;
+    background-color: #f8fbf9;
+    color: #2e4631;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #7bb78b;
+    box-shadow: 0 0 5px rgba(123, 183, 139, 0.4);
+}
+
+button {
+    background-color: #7bb78b;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5fa46f;
+    transform: scale(1.05);
+}
+
+.greeting {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #365c3b;
+}
