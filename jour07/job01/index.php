@@ -3,5 +3,5 @@ function hello() {
 echo "Hello la Plateforme";
 }
 
-Hello();
+hello();
 ?>
