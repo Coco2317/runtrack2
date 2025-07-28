@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Baloo 2', cursive;
+    background: #92cf67;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #374151;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #ddff6f; 
+    animation: wiggle 1.5s ease-in-out infinite;
+    user-select: none;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    background: #868d05;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(255, 111, 145, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+button:hover {
+    background: #ff9671;
+    transform: scale(1.1) rotate(2deg);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
