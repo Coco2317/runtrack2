@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(145deg, #f8f5f0, #e3dcd2);
+    color: #3d3d3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #7c5c3b;
+}
+
+.message {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #4a3825;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.grille button, .grille .case {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #4a3825;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease;
+}
+
+.grille button:hover {
+    transform: scale(1.05);
+    background-color: #ece0d1;
+}
+
+.grille .case {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d5c6b8;
+}
+
+.reset-form button {
+    background-color: #7c5c3b;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-form button:hover {
+    background-color: #5f4429;
+}
