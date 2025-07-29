@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Initialisation
+// Initialisation du jeu
 if (!isset($_SESSION['plateau'])) {
     $_SESSION['plateau'] = array_fill(0, 9, null);
     $_SESSION['joueur'] = 'X';
@@ -15,8 +15,8 @@ if (isset($_POST['reset'])) {
     $_SESSION['message'] = '';
 }
 
-// Clic sur une case
-if (isset($_POST['case']) && $_SESSION['message'] === '') {
+// Quand le joueur clique sur une case
+if (isset($_POST['case']) && $_SESSION['message'] === '') { // on autorise le coup seulement si le jeu n’est pas terminé.
     $index = (int) $_POST['case'];
     if (is_null($_SESSION['plateau'][$index])) {
         $_SESSION['plateau'][$index] = $_SESSION['joueur'];
@@ -33,18 +33,18 @@ if (isset($_POST['case']) && $_SESSION['message'] === '') {
 }
 
 // Fonction de vérification de victoire
-function checkVictory($p) {
+function checkVictory($plateau) {
     $gagnantes = [
         [0,1,2],[3,4,5],[6,7,8],
         [0,3,6],[1,4,7],[2,5,8],
         [0,4,8],[2,4,6]
     ];
     foreach ($gagnantes as [$a, $b, $c]) {
-        if ($p[$a] !== null && $p[$a] === $p[$b] && $p[$b] === $p[$c]) {
-            return $p[$a];
+        if ($plateau[$a] !== null && $plateau[$a] === $plateau[$b] && $plateau[$b] === $plateau[$c]) { // les trois cases doivent être identiques ET non vides
+            return $plateau[$a];
         }
     }
-    return null;
+    return null;  // Si aucune combinaison n'a été trouvée, on retourne null : pas de gagnant
 }
 ?>
 
@@ -63,7 +63,7 @@ function checkVictory($p) {
     <p class="message"><?= htmlspecialchars($_SESSION['message']) ?></p>
 <?php else: ?>
     <p class="message">Joueur actuel : <?= $_SESSION['joueur'] ?></p>
-<?php endif; ?>
+<?php endif; ?> 
 
 <form method="post" class="grille">
     <?php foreach ($_SESSION['plateau'] as $i => $val): ?>

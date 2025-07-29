@@ -3,16 +3,16 @@ session_start();
 
 // Initialiser la session "prenoms" si elle n'existe pas
 if (!isset($_SESSION['prenoms'])) {
-    $_SESSION['prenoms'] = [];
+    $_SESSION['prenoms'] = []; //si pas encore de prénom [] crée une liste vide pour la démarrer    
 }
 
 // Réinitialiser la liste si on clique sur reset
 if (isset($_POST['reset'])) {
-    $_SESSION['prenoms'] = [];
+    $_SESSION['prenoms'] = []; //si l'utilisateur clique sur bouton réinitialiser, on vide cmplt la liste
 }
 
 // Ajouter le prénom si le formulaire est soumis et non vide
-if (isset($_POST['prenom']) && trim($_POST['prenom']) !== '') {
+if (isset($_POST['prenom']) && trim($_POST['prenom']) !== '') { //trim enlève les espaces au début et à la fin du prénom 
     $prenom = htmlspecialchars(trim($_POST['prenom']));
     $_SESSION['prenoms'][] = $prenom;
 }
@@ -37,8 +37,8 @@ if (isset($_POST['prenom']) && trim($_POST['prenom']) !== '') {
     <?php if (!empty($_SESSION['prenoms'])): ?>
         <h2>Prénoms enregistrés :</h2>
         <ul>
-            <?php foreach ($_SESSION['prenoms'] as $p): ?>
-                <li><?= $p ?></li>
+            <?php foreach ($_SESSION['prenoms'] as $prenom): ?>
+                <li><?= $prenom ?></li>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
