@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #fff5f7; /* rose très pâle */
+  background-color: #fff5f7; 
   color: #333;
   margin: 2rem auto;
   max-width: 900px;
@@ -9,9 +9,9 @@ body {
 
 h1 {
   text-align: center;
-  color: #b85c76; /* vieux rose doux */
+  color: #b85c76; 
   font-size: 2rem;
-  background-color: #ffe6eb; /* fond rosé clair */
+  background-color: #ffe6eb; 
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -28,7 +28,7 @@ table {
 }
 
 thead {
-  background-color: #f7cdd3; /* rose pastel */
+  background-color: #f7cdd3; 
   color: #333;
 }
 
@@ -41,7 +41,7 @@ thead th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #fdebee; /* rose très clair pour alternance */
+  background-color: #fdebee; 
 }
 
 tbody td {
