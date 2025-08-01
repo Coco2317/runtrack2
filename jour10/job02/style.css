@@ -1,0 +1,65 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff5f7; /* rose très pâle */
+  color: #333;
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #b85c76; /* vieux rose doux */
+  font-size: 2rem;
+  background-color: #ffe6eb; /* fond rosé clair */
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+thead {
+  background-color: #f7cdd3; /* rose pastel */
+  color: #333;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 2px solid #e8a8b2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fdebee; /* rose très clair pour alternance */
+}
+
+tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0d5da;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Message d'erreur / info */
+.message {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #ffe4e9;
+  border-left: 6px solid #e76c86;
+  border-radius: 8px;
+  color: #7e1d35;
+  font-size: 1rem;
+}
