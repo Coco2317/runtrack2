@@ -10,20 +10,16 @@
 <h1>🎓 Étudiants nés entre 1998 et 2018</h1>
 
 <?php
-// Connexion à la base de données
 $connexion = mysqli_connect("localhost", "root", "", "jour09");
 
-// Vérification de la connexion
 if (!$connexion) {
     die("<div class='message'>Erreur de connexion : " . mysqli_connect_error() . "</div>");
 }
 
-// Requête SQL
 $requete = "SELECT prenom, nom, naissance FROM etudiants 
             WHERE naissance BETWEEN '1998-01-01' AND '2018-12-31'";
 $resultat = mysqli_query($connexion, $requete);
 
-// Affichage du tableau HTML
 if ($resultat && mysqli_num_rows($resultat) > 0) {
     echo "<table>
             <thead>
